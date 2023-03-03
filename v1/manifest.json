@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "description": "Host checker",
+    "name": "Chrom extension",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_title": "Test Extension",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
